@@ -138,11 +138,13 @@ case 8:return <group position={[-1.94, 1.65, -0.5]}
         s={[1, 0.72, 0.015]}
         c="#fff4df"
     />
-    <Image
-        url="/party-photo.png"
-        position={[0, 0, 0.06]}
-        scale={[0.9, 0.62]}
-    />
+    <Suspense fallback={null}>
+  <Image
+    url="/party-photo.png"
+    position={[0, 0, 0.06]}
+    scale={[0.9, 0.62]}
+  />
+</Suspense>
 </group>
 default:return <group>
     {Array.from({length:9},(_,i)=>

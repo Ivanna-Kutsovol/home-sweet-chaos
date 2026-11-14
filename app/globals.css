@@ -610,7 +610,7 @@ footer{
     margin-top: 0;
 }
   .scene:has(+ .intro) {
-  top: 340px;
+  top: 455px;
 }
 /* Дом во время вопросов */
 .scene:has(+ .question) {
