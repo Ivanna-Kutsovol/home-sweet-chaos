@@ -131,7 +131,7 @@ export default function Home() {
                     <span className="answer-index">0{i + 1}</span>
                     {answer}
                     <span className="arrow">
-                        {chosen && game.answers[game.step] === answer ? "✓" : "↗"}
+                        {chosen && game.answers[game.step] === answer ? "✓" : '\u2197\uFE0E'}
                     </span>
                 </button>
             ))}
@@ -147,7 +147,7 @@ export default function Home() {
             ) : (
                 <>
                     <span>Обсудите вслух и выберите вместе</span>
-                    <button className="skip" onClick={() => choose(q.options[0])}> Пропустить ↗</button>
+                    <button className="skip" onClick={() => choose(q.options[0])}> Пропустить {'\u2197\uFE0E'}</button>
                 </>
             )}
             </div>

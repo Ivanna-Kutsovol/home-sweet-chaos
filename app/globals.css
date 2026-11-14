@@ -560,7 +560,6 @@ footer{
   animation-delay: 0.45s;
 }
 
-/* Локи реагирует один раз на каждую новую реплику. */
 .speech {
   width: 200px;
   max-width: calc(100vw - 40px);
@@ -600,8 +599,44 @@ footer{
   1.5% { transform: scaleY(.12); }
 }
 @media (max-width: 760px) {
-  .speech { width: 210px; padding: 14px; }
+  /* .speech { width: 210px; padding: 14px; } */
   .speech b { font-size: 9px; }
-  .speech p { font-size: 14px; margin-top: 8px; }
-  .dog { --loki-scale: .95; height: 90px; margin-top: 14px; }
+  /* .speech p { font-size: 14px; margin-top: 8px; } */
+  .dog { 
+    --loki-scale: .95;
+    height: 90px; 
+    margin-top: 14px; 
+    flex-shrink: 0;
+    margin-top: 0;
+}
+  .scene:has(+ .intro) {
+  top: 340px;
+}
+/* Дом во время вопросов */
+.scene:has(+ .question) {
+  top: 340px;
+}
+
+  
+}
+@media (max-width: 900px){
+    .speech {
+    width: 170px;
+    padding: 10px 12px;
+  }
+
+  .speech p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .loki {
+    left: 6%;
+    right: 6%;
+    bottom: 75px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+  }
 }
